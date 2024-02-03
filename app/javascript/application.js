@@ -1,11 +1,17 @@
+import '@hotwired/turbo-rails';
+import './controllers';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-function App() {
-  return (<h1>Hello World!</h1>);
-}
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import App from './components/App';
 
 ReactDOM.render(
-  <App/>,
-  document.getElementById('root'),
-);
+  <BrowserRouter>
+      <Provider store={store}>
+      <App />
+      </Provider>
+      </BrowserRouter>,
+      document.getElementById('root')
+    );
