@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMessages } from '../redux/greetings/greetingsSlice';
 
-const Messages = () => {
+const Greeting = () => {
   const dispatch = useDispatch();
   const message = useSelector((state) => state.messages.message);
   const status = useSelector((state) => state.messages.status);
@@ -29,4 +29,4 @@ const Messages = () => {
   );
 };
 
-export default Messages;
+export default Greeting;

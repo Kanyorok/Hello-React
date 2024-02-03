@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Messages from './Messages';
+import Greeting from './Greeting';
 
 const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Messages />} />
+        <Route path="/" element={<Greeting />} />
       </Routes>
     </>
   );
